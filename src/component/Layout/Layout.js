@@ -46,7 +46,7 @@ export default class Layout extends React.Component {
             <Router history={history}>
                 <div>
                     <div className={styles.header} id="header">
-                        <Link to="/"><img src={Logo} className={styles.logo}/></Link>
+                        <img src={Logo} className={styles.logo} onClick={()=>{window.location.href="/";}}/>
                     </div>
                     <div className={styles.sidebar}>
                         <Menu
