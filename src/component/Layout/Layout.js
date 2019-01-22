@@ -11,7 +11,8 @@ import createHistory from 'history/createHashHistory';
 // history
 const history = createHistory();
 
-import ArticleCreate from "../ArticleCreate/ArticleCreate.js";
+import ArticleCreate from "../ArticleCreate/ArticleCreate";
+import ArticleList from "../ArticleList/ArticleList";
 
 import Logo from "./logo.svg";
 
@@ -56,7 +57,7 @@ export default class Layout extends React.Component {
                         >
                             <Menu.SubMenu key="article-submenu" title={<span><Icon type="mail" /><span>文章管理</span></span>}>
                                 <Menu.Item key="/article/create">新建文章</Menu.Item>
-                                <Menu.Item key="/article/delete">删除文章</Menu.Item>
+                                <Menu.Item key="/article/list">浏览文章</Menu.Item>
                             </Menu.SubMenu>
                             <Menu.SubMenu key="user-submenu" title={<span><Icon type="appstore" /><span>用户管理</span></span>}>
                                 <Menu.Item key="/user/create">新建用户</Menu.Item>
@@ -68,6 +69,7 @@ export default class Layout extends React.Component {
                         <Switch>
                             <Route exact path="/" render={ ()=>{ return (<h1>首页</h1>);} } />
                             <Route path="/article/create" component={ArticleCreate}/>
+                            <Route path="/article/list" component={ArticleList}/>
                         </Switch>
                     </div>
                 </div>

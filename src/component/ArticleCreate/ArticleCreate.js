@@ -3,9 +3,6 @@ import React from "react";
 import {Button, Modal} from "antd";
 
 export default class ArticleCreate extends React.Component {
-
-
-
     render() {
         return (
             <Button onClick={()=> {
